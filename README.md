@@ -2,7 +2,8 @@
 
 EECS 839 Spring 2018
 Programming Project
-due: April 20, 2018
+
+
 Implement the following rule-checking system. Your project should be implemented on one of the departmental computers, e.g., cycle 1, under Linux. Your program should accept two input files: the first input file will contain rules, the second input file will contain data in the LERS format. Both input files may contain comments (anything that starts from "!" to the end of the line is a comment).
 In the text that follows, spaces should be understood not only as ordinary spaces but also as white space characters, such as the end of line, tab, etc. Any line of both input files may start from one or more spaces and one or more spaces may end it. Additionally, there may be empty lines in both files. You may assume that the input data file does not contain
 errors. Rules will be preceded by three numbers, separated by commas and zero or more spaces: specificity, strength, and the total number of matching training cases. A rule contains one or more conditions and one action. Conditions are separated by some symbols, e.g., "&", "^". The conditions and the action may be preceded or followed by any number of spaces. Rules are separated by one or more spaces and/or by empty lines. A condition starts from "(", then zero or more spaces, the name of attribute, zero or more spaces, comma, zero or more spaces, the attribute value, such as "high", "3", or "1.2..3.5", zero or more spaces, finally, ")". The rule's last condition and the action are separated not only by possible spaces but also by a string of symbols (e.g., "->", "-->", etc.) that starts from "-". An action is described the same way as the condition, except that the role of "attribute" is played by "decision".
@@ -39,6 +40,5 @@ COMPLETE MATCHING:
 List of cases that are incorrectly classified: <list of cases List of cases that are correctly classified: <list of cases>
 <list of cases> contains cases, one case per line; each line contains the list of all attribute values and then decision value, separated by commas. <list of cases with justification> contains first a case, i.e., the list of all attribute values and then decision value, separated by commas; then, in the case where support was used, ";" and the total score, then lines representing all matching rules (describing all concepts). Every such line contains a list of conditions, separated by "&", then "->" and an action, where a condition starts from "(", then attribute name, comma, attribute value, and ")", similarly action, and then ";" and the rule score.
 Finally, the program should ask the user whether the user wishes to exit the program or to start the program all over again.
-General Remarks. Your program should be able to deal with unexpected answers of the user and not crush but rather repeat the question. Use of recursion is not encouraged. You should expect input data files of any size, more than a thousand cases and more than a hundred attributes.
-Include all comments, including instructions about compiling and linking and the name of a computer on which you implemented your program, in a single file called read.me. Do not forget to include your name and KUID#. When you are ready to submit the project, send ALL necessary source files, makefile (if any), and the read.me file by e-mail to the TA. Do not send object files, executable files, and test data files. Late projects will be accepted with 10% penalty per day up to five days.
+
  
